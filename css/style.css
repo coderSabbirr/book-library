@@ -1,0 +1,31 @@
+body{
+    background-color: #E1DCC5;
+}
+#error_message {
+    color: red;
+    text-align: center;
+    display: none;
+}
+#found_result{
+    margin-left: 40px;
+}
+#show_result li {
+    background-color: #F9F9F9;
+    margin:5px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.details {
+  margin-top:60px ;
+}
+.details .author_name {
+ font-size: 18px;
+ color: black;
+}
+
+.details a {
+  text-decoration: none;
+}
+.publish_year {
+    color: #666;;
+}
