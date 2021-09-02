@@ -44,7 +44,6 @@ const displaySearchResult = books => {
   // Display Search Result
   books.docs.forEach(book => {
     const div = document.createElement('div')
-
     div.classList.add('col-md-4')
     div.innerHTML = `  
               <div class="card h-100 mb-3 book">
@@ -52,10 +51,10 @@ const displaySearchResult = books => {
                 <div class="card-body">
                   <a href=""><h4 class="card-title">${book.title}</h4></a> 
                   <p class="card-text"> <span  class="author_name"><i>Author:</span> ${book.author_name ?book.author_name:"N/a"}</i></p>
-                  <p class="card-text"> <span  class="publisher">Publisher:</span> ${book.publisher}</p
+                  <p class="card-text"> <span  class="publisher">Publisher:</span> ${book.publisher ?book.publisher:"N/a"}</p
                 </div>
                   <div class="card-footer">
-                  <small class="text-muted"><p class="card-text"><span class="publish_year">First published ${book.first_publish_year}</span></p></small>
+                  <small class="text-muted"><p class="card-text"><span class="publish_year">First published ${book.first_publish_year ?book.first_publish_year:"N/a"}</span></p></small>
                   </div>
               </div>
             
