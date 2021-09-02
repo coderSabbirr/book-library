@@ -1,8 +1,32 @@
 body{
-    background-color: #E1DCC5;
+    background-image: url("https://cdn.wallpapersafari.com/0/80/KIiEkW.jpg");
+    background-repeat: repeat;
+}
+.heading {
+    color: rgb(227, 242, 255);
+}
+#search-btn {
+background-color: #212529;
+
+}
+#error_message  {
+    text-align: center;
+    color: rgb(219, 11, 11);
+    background-color: rgb(13, 13, 14);
+    
+}
+.found_result {
+    color: rgba(251, 251, 251, 0.89);
+    font-size: 25px;
+    font-weight:400;
+    font-style: italic;
+    padding: 10px;
+
 }
 .book {
+    border:1.5px solid rgb(198, 233, 245) ;
     border-radius: 10px;
+    background-color: #F9F9F9;
     
 }
 
