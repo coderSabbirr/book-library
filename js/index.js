@@ -47,7 +47,7 @@ const displaySearchResult = books => {
     div.classList.add('col-md-4')
     div.innerHTML = `  
               <div class="card h-100 mb-3 book">
-                <img src="https://covers.openlibrary.org/b/id/${book.cover_i }-M.jpg" class="fluid w-50 h-75 mx-auto mt-2" alt="...">
+                <img src="${errorimage(book)}" class="fluid w-50 h-75 mx-auto mt-2" alt="...">
                 <div class="card-body">
                   <a href=""><h4 class="card-title">${book.title}</h4></a> 
                   <p class="card-text"> <span  class="author_name"><i>Author:</span> ${book.author_name ?book.author_name:"N/a"}</i></p>
@@ -65,5 +65,24 @@ const displaySearchResult = books => {
   });
 
  }
+
+}
+// error image handal
+const errorimage = book => {
+
+  const imageUrl = `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`;
+
+  if (imageUrl === `https://covers.openlibrary.org/b/id/undefined-M.jpg`) {
+
+      const placeHolderImage = "https://openlibrary.org/images/icons/avatar_book-sm.png";
+
+      return placeHolderImage;
+  }
+  else {
+      const mainCoverImage = imageUrl;
+
+      return mainCoverImage;
+
+  }
 
 }
