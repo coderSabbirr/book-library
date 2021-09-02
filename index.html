@@ -2,18 +2,26 @@
 <html lang="en">
 
 <head>
+    <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookshop</title>
+    <link rel="shortcut icon" href="images/fav.png" type="image/x-icon">
+        <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+        <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- customs CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Title  -->
+    <title>Book Library</title>
 </head>
 
 <body>
     <div class="container">
+        <!-- Book search area -->
         <div>
             <h1 class="text-center mt-5 mb-4 heading">Welcome to Open Library</h1>
             <div class="input-group mb-3 w-50 mx-auto">
@@ -23,13 +31,19 @@
                     type="button"><i class="fas fa-search"></i></button>
             </div>
         </div>
+         <!-- Spiner div -->
+        <div id="spiner" class="loader">Loading...</div>
+        <!-- Error  div -->
         <div id="error_message"></div>
+        <!-- found result div -->
         <div id="found_result"></div>
+        <!-- Show search result div -->
         <div id="show_result" class="row row-cols-1 row-cols-md-3 g-4 "> </div>
-        <a href=""></a>
+        
     </div>
-
+     <!-- Fontawesome kit -->
     <script src="https://kit.fontawesome.com/ab34170084.js" crossorigin="anonymous"></script>
+     <!-- Custom js  -->
     <script src="js/index.js"></script>
 </body>
 

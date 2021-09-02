@@ -3,11 +3,17 @@ const errorMessage = document.getElementById('error_message');
 
 const searchBook = () => {
   const searchFiled = document.getElementById('search_filed');
+  // Display Spinner
+  document.getElementById('spiner').style.display='block';
   const searchText = searchFiled.value;
+  // clear data
   searchFiled.value = '';
+  // Clear found result Details
   foundResult.innerHTML='';
+  // Clear error Message
   errorMessage.innerHTML='';
-
+ 
+   //load data
     const url = `http://openlibrary.org/search.json?q=${searchText}`
     fetch(url)
     .then(res => res.json())
@@ -19,14 +25,23 @@ const searchBook = () => {
 
 const displaySearchResult = books => {
   const searchResult = document.getElementById('show_result')
+  // Clear book Details
   searchResult.textContent = '';
 
+ // error handal
   if(books.numFound === 0){
-    errorMessage.innerHTML=`<h3  class="p-4">No result found </h3>`
+    // Hide Spinner
+    document.getElementById('spiner').style.display='none';
+    errorMessage.innerHTML=`<h3 class="p-4">No result found!</h3>`
   }
   
  else {
+   // Hide Spinner
+  document.getElementById('spiner').style.display='none';
+  // Display Found Result
   foundResult.innerHTML=`<h3 class="found_result">Total result found : ${books.numFound}</h3>`
+  
+  // Display Search Result
   books.docs.forEach(book => {
     const div = document.createElement('div')
 
