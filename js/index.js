@@ -66,6 +66,4 @@ const displaySearchResult = books => {
 
  }
 
-
-
 }
